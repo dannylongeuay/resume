@@ -1,0 +1,213 @@
+%-------------------------
+% Source : https://github.com/sb2nov/resume
+% Author : Daniel Longeuay
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\technicalItem}[1]{
+  \item\small{
+    {#1 \vspace{-.75em}}
+  }
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Daniel Longeuay}} & Email : \href{mailto:dannylongeuay@gmail.com}{dannylongeuay@gmail.com} \\
+  Website : \href{https://ndsquared.net/}{https://ndsquared.net} & GitHub : \href{https://github.com/dannylongeuay}{https://github.com/dannylongeuay} \\
+\end{tabular*}
+
+%-----------SUMMARY--------------------
+\section{Summary}
+{Data-driven, detail-orientated, and insightful Site Reliability Engineer with proficiency in software
+development, cloud infrastructure, automation, and container orchestration. Utilizes programming, CI/CD,
+and infrastructure as code to build highly-available services. Measures service KPIs with rich telemetry
+and monitoring. Exhibits leadership and collaboration skills through project design, implementation, 
+deployment, and integration. Drives company-wide initiatives that provide value to multiple teams and customers.}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Warner Bros. Discovery}{Remote}
+      {Staff Site Reliability Engineer}{Apr 2022 - Present}
+      \resumeItemListStart
+        \resumeItem{Kubernetes, Terraform}
+          {Developed, released, and deployed security updates to Kubernetes clusters}
+        \resumeItem{CodeFresh, Helm, Kubernetes}
+          {Deployed CI/CD hybrid pipeline runner into Kubernetes clusters for workloads}
+        \resumeItem{AWS, Kubernetes, VMWare}
+          {Develop and manage systems frameworks to deliver highly-available services}
+        \resumeItem{Hire and Develop the Best}
+          {Mentor junior team members on technology, development workflows, and mindset}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {iStreamPlanet}{Remote}
+      {Senior Site Reliability Engineer}{Jul 2020 - Apr 2022}
+      \resumeItemListStart
+        \resumeItem{AWS, Github Actions, Terraform}
+          {Created centralized container artifact repo to manage AWS Elastic Container Registry repositories}
+        \resumeItem{CodeFresh, Terraform}
+          {Migrated pipelines from CodeFresh Container Registry (deprecated) to AWS ECR}
+        \resumeItem{Flask, Helm, Kubernetes, Nginx, Python, Terraform}
+          {Designed, developed, deployed and integrated a network API service that serves as the single source of truth for network device information}
+        \resumeItem{AWS, DataDog, Helm, SNMP, Kubernetes, Terraform}
+          {Migrated DataDog agent deployment from AWS EC2 instances to a modern Kubernetes deployment (AWS EKS)}
+        \resumeItem{DataDog, Kubernetes, Terraform}
+          {Reduced DataDog costs by a factor of 3x, by optimizing vertical node scaling in Kubernetes clusters and worked with teams
+          to address high cardinality metrics}
+        \resumeItem{Ansible, AWS, Terraform}
+          {Built highly available, geographically redundant infrastructure services in the cloud (DNS, Syslog, NTP)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {iStreamPlanet}{Remote}
+      {Network Engineer}{Oct 2019 - Jul 2020}
+      \resumeItemListStart
+        \resumeItem{Ansible, CodeFresh, Python}
+          {Refactored network device management process to deploy through CI/CD}
+        \resumeItem{Golang, Terraform, ThousandEyes}
+          {Built custom terraform provider plugin to scale monitoring tests programmatically}
+        \resumeItem{Ansible, DataDog, Terraform}
+          {Migrated Solarwinds monitoring to DataDog SNMP polling and ThousandEyes path monitoring}
+        \resumeItem{Python}
+          {Built reusable python script to patch network device security vulnerabilities}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {NBCUniversal}{Universal City, CA}
+      {Senior Engineer, Network Automation}{May 2018 - Oct 2019}
+      \resumeItemListStart
+        \resumeItem{Python}
+          {Automated configuration compliance and remediation on a global scale}
+        \resumeItem{Python, Docker, VMware}
+          {Built in-house tooling for network inventory analysis, reporting, and configuration backup}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%--------SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+  \technicalItem{
+    \textbf{CI/CD}{: CodeFresh, Github Actions}
+    \hfill
+    \textbf{Cloud Providers}{: AWS, GCP, DigitalOcean}
+  }
+  \technicalItem{
+    \textbf{Configuration Management}{: Ansible, Helm}
+    \hfill
+    \textbf{Containers}{: Docker, Kubernetes, VMWare}
+  }
+  \technicalItem{
+    \textbf{Infrastructure Provisioning}{: Terraform, Pulumi}
+    \hfill
+    \textbf{Markup Languages}{: HTML, {\LaTeX}, Markdown}
+  }
+  \technicalItem{
+    \textbf{Monitoring}{: DataDog, Grafana, InfluxDB, Prometheus, SNMP, Solarwinds, Splunk, Syslog, ThousandEyes}
+  }
+  \technicalItem{
+    \textbf{Programming Languages}{: Bash, Golang, Java, Javascript/Typescript, Python}
+  }
+  \technicalItem{
+    \textbf{Web Development}{: Flask, FastAPI, GraphQL, Nginx, NodeJS, PostgreSQL, REST, Svelte, TailwindCSS, VueJS}
+  }
+ \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {California State San Bernardino}{Bachelor of Arts in Mathematics}
+      {}{}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

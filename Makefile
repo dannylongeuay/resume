@@ -6,12 +6,15 @@ help: ## View help information
 
 .PHONY: convert
 convert: ## Convert TEX file to PDF
-	pdflatex resume.tex
+	pdflatex resumeStandard.tex
+	pdflatex resumeSinglePage.tex
+	pdflatex resumeTwoColumn.tex
 
 .PHONY: clean
 clean: ## Clean build artifacts
-	rm resume.log
-	rm resume.aux
+	rm resume*.log
+	rm resume*.aux
+	rm resume*.out
 
 .PHONY: build
 build: convert clean ## Build PDF

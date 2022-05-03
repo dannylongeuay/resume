@@ -1,0 +1,72 @@
+%-------------------------
+% Source : https://velleman.org/resume.html
+% Author : Daniel Longeuay
+% License : MIT
+%------------------------
+
+\documentclass[11pt, oneside]{memoir}
+\setlrmarginsandblock{0.5in}{3in}{*}
+\setulmarginsandblock{0.5in}{0.7in}{*}
+\setlength{\sidebarhsep}{0.5in}
+\setlength{\sidebarwidth}{2in}
+\setsidebarheight{\textheight}
+\checkandfixthelayout
+\setcounter{secnumdepth}{0}
+\nonzeroparskip
+\setlength{\parindent}{0pt}
+\newcommand{\position}[2]{\subsubsection{#1\hfill\mdseries{#2}}}
+
+\setsubsubsecheadstyle{\normalsize\bfseries}
+\setsubsecheadstyle{\Large\bfseries}
+
+\newcommand{\ruledsec}[1]{
+    \Large\bfseries #1 \par\vskip-2mm
+    \rule{1in}{0.1mm}
+    \par\vskip-2mm}
+\setsecheadstyle{\ruledsec}
+
+\begin{document}
+\begin{minipage}[t][0.6in][b]{4in}
+    {\fontsize{34pt}{40pt}\selectfont
+        \rmfamily\textbf{WIP Daniel Longeuay}}
+    \vfill
+    \textsf{Staff Site Reliability Engineer}
+\end{minipage}
+\sidebar{\begin{minipage}[t][0.6in][b]{1in}
+    ndsquared.net
+    \vfill
+    dannylongeuay@gmail.com
+    \vfill
+    github.com/dannylongeuay
+\end{minipage}}
+\vskip15pt
+
+\sidebar{
+    \section{Skills}
+    \subsection{Programming}
+    ...
+    \subsection{Infrastructure}
+    ...
+}
+
+\sidebar{
+    \section{Education}
+    ...
+}
+
+\section{Experience}
+\subsection{iStreamPlanet}
+\position{Senior Site Reliability Engineer}{Jul 2020--Apr 2022}
+\position{Network Engineer}{Oct 2019--Jul 2020}
+
+Building highly available, geographically redundant services.
+Developing tooling and automated pipelines for consistent delivery.
+Reducing team silos with company-wide initiatives.
+Building automation to treat systems operation as a software problem.
+Enhancing monitoring to measure KPIs with infrastructure as code.
+
+Network management through CI/CD.
+Building scalable monitoring and telemetry with infrastructure as code.
+Developing hybrid cloud solutions for agile workflows.
+...
+\end{document}
