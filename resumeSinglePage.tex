@@ -54,10 +54,8 @@
   }
 }
 
-\newcommand{\technicalItem}[1]{
-  \item\small{
-    {#1 \vspace{-.75em}}
-  }
+\newcommand{\technicalSkill}[1]{
+  \small{#1}
 }
 
 \newcommand{\resumeHeading}[4]{
@@ -117,12 +115,12 @@ deployment, and integration. Drives company-wide initiatives that provide value 
       {Warner Bros. Discovery}{Remote}
       {Staff Site Reliability Engineer}{Apr 2022 - Present}
       \resumeItemListStart
-        \resumeItem{Kubernetes, Terraform}
-          {Developed, released, and deployed security updates to Kubernetes clusters}
-        \resumeItem{CodeFresh, Helm, Kubernetes}
-          {Deployed hybrid CI/CD runner into Kubernetes clusters for workloads}
-        \resumeItem{AWS, Kubernetes, VMWare}
+        \resumeItem{DevOps}
           {Develop and manage systems frameworks to deliver highly-available services}
+        \resumeItem{Cloud}
+          {Deployed hybrid CI/CD runner into Kubernetes clusters for workloads}
+        \resumeItem{Security}
+          {Developed, released, and deployed security updates to Kubernetes clusters}
         \resumeItem{Hire and Develop the Best}
           {Mentor junior team members on technology, development workflows, and mindset}
       \resumeItemListEnd
@@ -131,18 +129,18 @@ deployment, and integration. Drives company-wide initiatives that provide value 
       {iStreamPlanet}{Remote}
       {Senior Site Reliability Engineer}{Jul 2020 - Apr 2022}
       \resumeItemListStart
-        \resumeItem{AWS, Github Actions, Terraform}
+        \resumeItem{Cross-team Ownership}
           {Created centralized container artifact repo to manage AWS Elastic Container Registry repositories}
-        \resumeItem{CodeFresh, Terraform}
+        \resumeItem{Agile}
           {Migrated pipelines from CodeFresh Container Registry (deprecated) to AWS ECR}
-        \resumeItem{Flask, Helm, Kubernetes, Nginx, Python, Terraform}
+        \resumeItem{Full Stack Development}
           {Designed, developed, deployed and integrated a network API service that serves as the single source of truth for network device information}
-        \resumeItem{AWS, DataDog, Helm, SNMP, Kubernetes, Terraform}
+        \resumeItem{Cloud}
           {Migrated DataDog agent deployment from AWS EC2 instances to a modern Kubernetes deployment (AWS EKS)}
-        \resumeItem{DataDog, Kubernetes, Terraform}
+        \resumeItem{Bottom Line}
           {Reduced DataDog costs by a factor of 3x, by optimizing vertical node scaling in Kubernetes clusters and worked with teams
           to address high cardinality metrics}
-        \resumeItem{Ansible, AWS, Terraform}
+        \resumeItem{Infrastructure as a Service}
           {Built highly available, geographically redundant infrastructure services in the cloud (DNS, Syslog, NTP)}
       \resumeItemListEnd
 
@@ -150,13 +148,13 @@ deployment, and integration. Drives company-wide initiatives that provide value 
       {iStreamPlanet}{Remote}
       {Network Engineer}{Oct 2019 - Jul 2020}
       \resumeItemListStart
-        \resumeItem{Ansible, CodeFresh, Python}
+        \resumeItem{Network as a Service}
           {Refactored network device management process to deploy through CI/CD}
-        \resumeItem{Golang, Terraform, ThousandEyes}
+        \resumeItem{DevOps}
           {Built custom terraform provider plugin to scale monitoring tests programmatically}
-        \resumeItem{Ansible, DataDog, Terraform}
+        \resumeItem{Innovation}
           {Migrated Solarwinds monitoring to DataDog SNMP polling and ThousandEyes path monitoring}
-        \resumeItem{Python}
+        \resumeItem{Security}
           {Built reusable python script to patch network device security vulnerabilities}
       \resumeItemListEnd
 
@@ -164,9 +162,9 @@ deployment, and integration. Drives company-wide initiatives that provide value 
       {NBCUniversal}{Universal City, CA}
       {Senior Engineer, Network Automation}{May 2018 - Oct 2019}
       \resumeItemListStart
-        \resumeItem{Python}
+        \resumeItem{Security}
           {Automated configuration compliance and remediation on a global scale}
-        \resumeItem{Python, Docker, VMware}
+        \resumeItem{Full Stack Development}
           {Built in-house tooling for network inventory analysis, reporting, and configuration backup}
       \resumeItemListEnd
 
@@ -174,32 +172,35 @@ deployment, and integration. Drives company-wide initiatives that provide value 
 
 %--------SKILLS------------
 \section{Skills}
- \resumeSubHeadingListStart
-  \technicalItem{
+  \technicalSkill{
     \textbf{CI/CD}{: CodeFresh, Github Actions}
     \hfill
     \textbf{Cloud Providers}{: AWS, GCP, DigitalOcean}
   }
-  \technicalItem{
+
+  \technicalSkill{
     \textbf{Configuration Management}{: Ansible, Helm}
     \hfill
     \textbf{Containers}{: Docker, Kubernetes, VMWare}
   }
-  \technicalItem{
+
+  \technicalSkill{
     \textbf{Infrastructure Provisioning}{: Terraform, Pulumi}
     \hfill
     \textbf{Markup Languages}{: HTML, {\LaTeX}, Markdown}
   }
-  \technicalItem{
+
+  \technicalSkill{
     \textbf{Monitoring}{: DataDog, Grafana, InfluxDB, Prometheus, SNMP, Solarwinds, Splunk, Syslog, ThousandEyes}
   }
-  \technicalItem{
+
+  \technicalSkill{
     \textbf{Programming Languages}{: Bash, Golang, Java, Javascript/Typescript, Python}
   }
-  \technicalItem{
+
+  \technicalSkill{
     \textbf{Web Development}{: Flask, FastAPI, GraphQL, Nginx, NodeJS, PostgreSQL, REST, Svelte, TailwindCSS, VueJS}
   }
- \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
