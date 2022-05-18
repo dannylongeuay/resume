@@ -9,21 +9,31 @@
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage[margin=1.25in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\setcounter{secnumdepth}{0}
+\pagestyle{empty}
 
 \renewcommand{\maketitle}{
   \begin{center}
-    {\huge\bfseries WIP \theauthor}
+    {\huge\bfseries\theauthor}
 
     \vspace{.25em}
 
-    {dannylongeuay@gmail.com --- https://www.ndsquared.net}
+    {\href{mailto:dannylongeuay@gmail.com}{dannylongeuay@gmail.com} --- \href{https://ndsquared.net/}{ndsquared.net} --- \href{https://github.com/dannylongeuay}{github.com/dannylongeuay}}
   \end{center}
 }
 
 \titleformat{\section}{\huge\bfseries}{\hspace{-.25in}}{0em}{}[\titlerule]
 \titleformat{\subsection}[runin]{\bfseries}{}{0em}{}[---]
 
-\titlespacing{\subsection}{0em}{.25em}{0em}
+\titlespacing{\subsection}{.25em}{.25em}{0em}
+
+\newcommand{\skill}[2]{\subsubsection{\hspace{.5em}#1\hfill\mdseries#2}\vspace{-.5em}}
+\newcommand{\experienceHeading}[2]{\subsubsection{#1\hfill\mdseries{#2}\vspace{.75em}}}
+
+\newcommand{\experienceItem}[2]{\item\small{\vspace{-.5em}\hspace{.25in}\bfseries#1$\Rightarrow$\mdseries#2}}
+\newcommand{\experienceItemListStart}{\begin{itemize}}
+\newcommand{\experienceItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
 
@@ -42,89 +52,90 @@ deployment, and integration. Drives company-wide initiatives that provide value 
 
 \section{Technical Skills}
 
-\subsection{CI/CD}
+  \skill{CI/CD}{CodeFresh, Github Actions}
 
-CodeFresh, Github Actions
+  \skill{Cloud Providers}{AWS, GCP, DigitalOcean}
 
-\subsection{Cloud Providers}
+  \skill{Configuration Management}{Ansible, Helm}
 
-AWS, GCP, DigitalOcean
+  \skill{Containers/Orchestration}{Docker, Kubernetes, VMWare}
 
-\subsection{Configuration Management}
+  \skill{Infrastructure Provisioning}{Terraform, Pulumi}
 
-Ansible, Helm
+  \skill{Markup Languages}{HTML, {\LaTeX}, Markdown}
 
-\subsection{Containers/Orchestration}
+  \skill{Monitoring}{DataDog, Grafana, InfluxDB, Prometheus, Splunk}
 
-Docker, Kubernetes, VMWare
+  \skill{Programming Languages}{Bash, Golang, Java, Javascript/Typescript, Python}
 
-\subsection{Infrastructure Provisioning}
+  \skill{Web Frontend}{Nginx, NodeJS, Svelte, TailwindCSS, VueJS}
 
-Terraform, Pulumi
+  \skill{Web Backend}{Flask, FastAPI, GraphQL, NodeJS}
 
-\subsection{Markup Languages}
+\section{\vspace{.5em}Professional Experience}
 
-HTML, {\LaTeX}, Markdown
+  \experienceHeading{Warner Bros. Discovery Staff Site Reliability Engineer}{Apr 2022 - Present}
 
-\subsection{Monitoring}
+    \experienceItemListStart
 
-DataDog, Grafana, InfluxDB, Prometheus, SNMP, Solarwinds, Splunk, Syslog
+      \experienceItem{Toil Elimination}{Design, develop, test, and deploy automation to reduce human labor.}
 
-\subsection{Programming Languages}
+      \experienceItem{Hire and Develop the Best}{Mentor junior team members on technology, development workflows, and mindset.}
 
-Bash, Golang, Java, Javascript/Typescript, Python
+      \experienceItem{DevOps}{Develop and manage systems frameworks to deliver highly-available services.}
 
-\subsection{Web Development}
+      \experienceItem{Monitoring}{Design, implement, and improve telemetry/analysis services.}
 
-Flask, FastAPI, GraphQL, Nginx, NodeJS, REST, Svelte, TailwindCSS, VueJS
+    \experienceItemListEnd
 
-\section{Professional Experience}
+  \experienceHeading{iStreamPlanet Senior Site Reliability Engineer}{Jul 2020 - Apr 2022}
 
-Warner Bros. Discovery Staff Site Reliability Engineer Apr 2022 - Present
+    \experienceItemListStart
 
-Design, develop, test, and deploy automation to reduce human labor.
-Mentor junior team members on technology, development workflows, and mindset.
-Develop and manage systems frameworks to deliver highly-available services.
-Design, implement, and improve telemetry/analysis services.
+      \experienceItem{Reliability}{Building highly available, geographically redundant services.}
 
-iStreamPlanet Senior Site Reliability Engineer Jul 2020 - Apr 2022
+      \experienceItem{Continuous Deployment}{Developing tooling and automated pipelines for consistent delivery.}
 
-Building highly available, geographically redundant services.
-Developing tooling and automated pipelines for consistent delivery.
-Reducing team silos with company-wide initiatives.
-Building automation to treat systems operation as a software problem.
-Enhancing monitoring to measure KPIs with infrastructure as code.
+      \experienceItem{Cross-team}{Reducing team silos with company-wide initiatives.}
 
-iStreamPlanet Network Engineer Oct 2019 - Jul 2020
+      \experienceItem{Automation as a Service}{Building automation to treat systems operation as a software problem.}
 
-Network management through CI/CD.
-Building scalable monitoring and telemetry with infrastructure as code.
-Developing hybrid cloud solutions for agile workflows.
+      \experienceItem{Monitoring}{Enhancing monitoring to measure KPIs with infrastructure as code.}
 
-NBCUniversal Senior Engineer, Network Automation May 2018 - Oct 2019
+    \experienceItemListEnd
 
-Automation design and implementation across Global Network Services.
-Proactively ensure reliability and availability for NBCU's global applications.
-Provide data analysis and metrics for LRP.
-Automated configuration compliance and remediation on a global scale.
-Built in-house tooling for network inventory analysis, reporting, and configuration backup.
-Integrated internal APIs for monitoring dashboards.
+  \experienceHeading{iStreamPlanet Network Engineer}{Oct 2019 - Jul 2020}
 
-NBCUniversal Network Engineer Jul 2015 - May 2018
+    \experienceItemListStart
 
-Member of a team of professionals responsible for maintaining the health of the network, responding to 
-incidents, troubleshooting, root cause analysis, allocation of IP addresses, network monitoring/alerts, 
-and granting read/write access to network devices.
-Team member responsibilities included, but not limited to automating standards and compliance checking, 
-deploying configurations to the entire network portfolio, running reports/analysis for stakeholders, 
-replacing end-of-life equipment, migrating services from one platform to another, and ensuring end-to-end 
-support and quality of service.
-Professional responsibilities include directly interfacing with stakeholders and hosting training sessions 
-for various technologies and tools.
+      \experienceItem{Network as a Service}{Network management through CI/CD.}
+
+      \experienceItem{Monitoring}{Building scalable monitoring and telemetry with infrastructure as code.}
+
+      \experienceItem{Cloud}{Developing hybrid cloud solutions for agile workflows.}
+
+    \experienceItemListEnd
+
+  \experienceHeading{NBCUniversal Senior Engineer, Network Automation}{May 2018 - Oct 2019}
+
+    \experienceItemListStart
+
+      \experienceItem{Automation}{Automation design and implementation across Global Network Services.}
+
+      \experienceItem{High Availability}{Proactively ensure reliability and availability for NBCU's global applications.}
+
+      \experienceItem{Data Analysis}{Provide data analysis and metrics for LRP.}
+
+      \experienceItem{Security}{Automated configuration compliance and remediation on a global scale.}
+
+      \experienceItem{Full Stack Development}{Built in-house tooling for network inventory analysis, reporting, and configuration backup.}
+
+      \experienceItem{Monitoring}{Integrated internal APIs for monitoring dashboards.}
+
+    \experienceItemListEnd
 
 \section{Education}
 
-California State San Bernardino
-Bachelor of Arts in Mathematics
+  \experienceHeading{California State San Bernardino}{Bachelor of Arts in Mathematics}
 
 \end{document}
