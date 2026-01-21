@@ -1,9 +1,14 @@
 # Resume
 
+Build resumes in PDF format using the TeX typesetting system.
+
+Uses [Tectonic](https://tectonic-typesetting.github.io/book/latest/index.html), a modernized, complete, self-contained TeX/LaTeX engine.
+
+Update `Tectonic.toml` when adding new documents to `src` directory.
+
 ```
-❯ make
-help                           View help information
-convert                        Convert TEX file to PDF
-clean                          Clean build artifacts
-build                          Build PDF
+❯ just -l
+Available recipes:
+    build
+    watch
 ```

@@ -1,0 +1,22 @@
+[doc]
+name = 'tex'
+bundle = 'https://data1.fullyjustified.net/tlextras-2022.0r0.tar'
+
+[[output]]
+name = 'resumeSinglePage'
+type = 'pdf'
+index = 'resumeSinglePage.tex'
+preamble = ''
+postamble = ''
+[[output]]
+name = 'resumeStandard'
+type = 'pdf'
+index = 'resumeStandard.tex'
+preamble = ''
+postamble = ''
+[[output]]
+name = 'resumeTwoColumn'
+type = 'pdf'
+index = 'resumeTwoColumn.tex'
+preamble = ''
+postamble = ''
